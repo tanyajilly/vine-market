@@ -82,3 +82,10 @@ img{
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 }
+
+.clearfix:after,
+.clearfix:before {
+	display: table;
+	content:"";
+}
+.clearfix:after {clear: both;}
