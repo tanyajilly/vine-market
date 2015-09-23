@@ -1,8 +1,94 @@
 a,
 input[type="submit"],
 input[type="button"],
-button{
+button,
+a:before{
 	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
 	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
 	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+body {
+	padding:20px;
+	color:#47a3da;
+	font:16px/1.1875 'Lato', sans-serif;
+}
+a {
+	color:#0080FF;
+	text-decoration: none;
+}
+a:hover {color:#02639d;}
+.ba-wrapper {
+	border:3px solid #47a3da;
+	max-width:1044px;
+	margin:0 auto;
+	padding:20px;
+}
+.ba-header {
+	border-bottom:3px solid #47a3da;
+	margin-bottom: 10px;
+	padding:0 0 20px;
+}
+.ba-header__title {
+	margin:0;
+	font-size: 24px;
+}
+.ba-product-list {margin:0 10px -10px;}
+.ba-product-list .ba-grid > [class*="ba-width-"]:nth-child(3n+4) {clear: both;}
+.ba-product {
+	text-align: center;
+	padding:35px 20px;
+}
+.ba-product__name {
+	font-size:2em;
+	margin: 0 0 12px;
+}
+.ba-product__link {
+	color:inherit;
+}
+.ba-product__price {
+	color:#c0c0c0;
+	font-size: 1.5em;
+	display: block;
+	margin-bottom: 10px;
+}
+.ba-product__descr {
+	margin:0 0 20px;
+	min-height:70px;
+}
+.ba-product__btn {
+	display: inline-block;
+	vertical-align: top;
+	color: #fff;
+	background-color: #47a3da;
+	border-radius: 3px;
+	padding:10px 19px;
+}
+.ba-product__btn:hover {
+	color:#fff;
+	background-color: #02639d;
+}
+.ba-product__btn:before {
+	content:"+";
+	color:#47a3da;
+	background-color: #fff;
+	width:14px;
+	height:14px;
+	font:bold 14px/1 Arial, Helvetica, sans-serif;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 6px;
+	position: relative;
+	top:-2px;
+}
+.ba-product__btn:hover:before {color:#02639d;}
+@media only screen and (max-width:860px) {
+	.ba-product-list .ba-grid > [class*="ba-width-"] {width:50%;}
+	.ba-product-list .ba-grid > [class*="ba-width-"]:nth-child(3n+4) {clear: none;}
+	.ba-product-list .ba-grid > [class*="ba-width-"]:nth-child(2n+3) {clear: both;}
+	.ba-product-list {margin:0 0 -10px;}
+} 
+@media only screen and (max-width:600px) {
+	.ba-product-list .ba-grid > [class*="ba-width-"] {width:100%;}
+	.ba-product {padding:35px 0;}
 }
